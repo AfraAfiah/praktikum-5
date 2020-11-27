@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<body background="baymax merah.jpg" style="background-size: cover;">
+
+	<center>
+		<h1 style="color: #212121;">LOGIN</h1>
+		<form method="REQUEST" style="color: honeydew;">
+			Username<br/>
+			<br>
+			<input type="text" placeholder="Username" id="username" name="Username"><br/>
+			<br>
+			Password<br/>
+			<br>
+			<input type="password"  placeholder="Password" id="password" name="Password"><br/>
+			<br>
+			<button type="submit" onclick="return login()">SUBMIT</button>
+		</form>
+	</center>
+
+</body>
+<script type="text/javascript">
+	function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Cannot Be Empty");
+			return false;
+		}
+		else if (password.length < 8) {
+			alert("Password doesn't match");
+			return false;
+		}
+		else if (username == "Afra Afiah" && password == "14021997") {
+			window.location = "chat.html";
+			return false;
+		}else{
+			alert("Username / Password is wrong");
+		}
+	}
+</script>
+</html>
